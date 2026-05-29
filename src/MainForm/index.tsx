@@ -49,16 +49,16 @@ export function MainForm({ aoAdicionar, aoAtualizar, cursoEmEdicao }: MainFormPr
         }
         else {
             const cursoNovo = {
-                id:"", //Deixar vazio pq o home calcula (auto-increment)
-                nome:dadosCurso.nomecurso,
-                periodo:dadosCurso.periodo
+                id: "", //Deixar vazio pq o home calcula (auto-increment)
+                nome: dadosCurso.nomecurso,
+                periodo: dadosCurso.periodo
             }
             console.log("Inclusão em formato JSON:/n",
                 JSON.stringify(cursoNovo, null, 2));
-                aoAdicionar(cursoNovo);
+            aoAdicionar(cursoNovo);
 
         }
-        setDadosCurso({nomecurso:'', periodo:''});
+        setDadosCurso({ nomecurso: '', periodo: '' });
 
     } //Fim do cadastrarCurso
 
@@ -67,7 +67,7 @@ export function MainForm({ aoAdicionar, aoAtualizar, cursoEmEdicao }: MainFormPr
             <Container>
                 <section className={styles.formularioContainer}>
                     <h2 className={styles.titulo}>
-                        {cursoEmEdicao? 'Editar Curso':'Cadastrar Novo Curso'}
+                        {cursoEmEdicao ? 'Editar Curso' : 'Cadastrar Novo Curso'}
                     </h2>
                     <form onSubmit={cadastrarCurso} >
                         <div className={styles.pularLinha}>
@@ -78,23 +78,30 @@ export function MainForm({ aoAdicionar, aoAtualizar, cursoEmEdicao }: MainFormPr
                                 name='nomecurso'
                                 placeholder='Ex: DevOps'
                                 value={dadosCurso.nomecurso} /*{dadosCurso.nomeCurso}*/
-                                onChange = {lidarComMudanca}
+                                onChange={lidarComMudanca}
                                 required
                             />
                         </div>{/*Fim da div do BotaoPadrao*/}
                         <div className={styles.pularLinha}>
                             <label htmlFor="periodo" className={styles.label}>Período</label>
-                            <select name="" id="" className={styles.estiloTabela}>
+                            <select
+                                id="periodo"
+                                name="periodo"
+                                className={styles.estiloTabela}
+                                value={dadosCurso.periodo}
+                                onChange={lidarComMudanca}
+                                required
+                            >
                                 <option value="">Selecione um período</option>
-                                <option value="">Matutino</option>
-                                <option value="">Vespertino</option>
-                                <option value="">Noturno</option>
-                                <option value="">Integral</option>
-                            </select>{/*Fim do select*/}
-                        </div>{/*Fim da div do select*/}
+                                <option value="Matutino">Matutino</option>
+                                <option value="Vespertino">Vespertino</option>
+                                <option value="Noturno">Noturno</option>
+                                <option value="Integral">Integral</option>
+                            </select>
+                        </div>
                         <div>
                             <BotaoPadrao type='submit'>
-                                {cursoEmEdicao?'Salvar Alteração':'Inserir Curso'}
+                                {cursoEmEdicao ? 'Salvar Alteração' : 'Inserir Curso'}
                             </BotaoPadrao>
                         </div>{/*Fim da div do botão*/}
                     </form>{/*Fim do formulário*/}
