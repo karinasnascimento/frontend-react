@@ -1,0 +1,22 @@
+.input{
+    width: 100%;
+    padding: 0.625rem; /*10px*/
+    border: 0.10rem solid var(--cor-divisor);
+    border-radius: 0.20rem;
+    font-family: var(--fonte-padrao);
+    color: var(--cor-texto-principal);
+    background-color: white;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus{
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 0.2rem var(--cor-primaria-clara);
+}
+
+.input:disabled{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-secundaria);
+    cursor: not-allowed;
+}

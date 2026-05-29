@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+    max-width: 50rem; /* Equivale a 800px */
+    margin: 0 auto;
+    padding: 1.25rem; /* Equivale a 20px */
+
+    /* Configurações do Flexbox */
+    display: flex;
+    flex-direction: column; /* Alinha os filhos (Header, Form, Tabela) em uma coluna vertical */
+    gap: 1.875rem; /* Equivale a 30px, criando um respiro automático entre as seções */
+}
+
+/* Media query para telas menores (ex: dispositivos móveis de até 600px) */
+@media (max-width: 37.5rem) {
+    .container {
+        padding: 1rem;
+        gap: 1.25rem; /* Reduz o espaçamento entre as seções no celular (20px) */
+    }
+}

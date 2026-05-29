@@ -1,0 +1,25 @@
+:root {
+    /* Cores Principais do Tema */
+    --cor-primaria: #0800ff; /* Azul principal dos botões e navegação */
+    --cor-primaria-clara: #62B2EB;
+    --cor-primaria-escura: #2A6BA1;
+
+    /* Cores Secundárias e de Fundo */
+    --cor-secundaria: #EFEFEF;
+    --cor-fundo-tela: #e6f2ff; /* Cor clara de fundo extraída do seu protótipo */
+
+    /* Cores de Feedback / Status */
+    --cor-erro: #CE0000;
+    --cor-aviso: #F9A13A;
+    --cor-sucesso: #34B831;
+    --cor-info: #62B2EB;
+
+    /* Cores de Texto e Divisórias */
+    --cor-texto-principal: #01090f;
+    --cor-texto-secundario: #5c5c5c;
+    --cor-texto-contraste: #ffffff;
+    --cor-divisor: #E0E0E0;
+
+    /* Tipografia */
+    --fonte-padrao: "Helvetica", "sans-serif";
+}

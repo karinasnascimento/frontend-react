@@ -1,0 +1,36 @@
+.listaContainer{
+    background-color: white;
+    padding: 1.25rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.2rem 0.4rem (0,0,0,0.5);
+}
+
+.titulo{
+    color: var(--cor-primaria);
+    margin-bottom: 1.25rem;
+}
+
+.buscaContainer{
+    margin-bottom: 1.25rem;
+}
+
+.tabela{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabela th .tabela td{
+    padding: 0.625rem;
+    border-bottom: 0.1rem solid var(--cor-divisor);
+}
+
+.tabela th{
+    border-bottom: 0.15rem solid var(--cor-divisor);
+    font-weight: bold;
+    color: var(--cor-texto-secundario);
+}
+
+.actionButton{
+    
+}

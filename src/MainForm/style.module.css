@@ -1,0 +1,29 @@
+.formularioContainer{
+    background-color: white;
+    padding: 1.25rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.2rem 0.1rem;
+}
+
+.titulo{
+    color: var(--cor-primaria);
+    margin-bottom: 1.25rem;
+}
+
+.label{
+    color: var(--cor-texto-secundario);
+    margin-bottom: 0.3125rem;
+    font-weight: bold;
+}
+
+.pularLinha{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+.estiloTabela{
+    padding: 0.625rem;
+    border-color: var(--cor-divisor);
+    border-radius: 0.4rem;
+}

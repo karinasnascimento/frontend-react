@@ -1,0 +1,25 @@
+.botao{
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-contraste);
+    padding: 0.65rem 1.25rem; /*Equivale a 10 pxh e 20px1*/
+    border: none;
+    border-radius: 0.25rem; /*4px*/
+    font-family: var(--fonte-padrao);
+    font-weight: bold;
+    cursor: pointer;
+    /*Efeito hover suave*/
+    transition: filter 0.3 ease, transform 0.3s;
+}
+
+.botao:hover{
+    filter: brightness(0.8); /*Esmaece em 80%*/
+    transform: scale(1.02); /*Aumenta tamanho em 2%*/
+}
+
+.botao:disabled{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-secundario);
+    cursor: not-allowed;
+    filter: none;
+    transform: none;
+}
