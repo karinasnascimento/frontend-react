@@ -1,4 +1,4 @@
-import { HomeIcon } from 'lucide-react'
+// import { HomeIcon } from 'lucide-react'
 import { Container } from '../../components/Container';
 import { MainForm } from '../../MainForm';
 import { ListaCursos, type Curso } from '../../ListaCursos';
@@ -40,6 +40,9 @@ export function Home() {
     const atualizarCurso = (cursoAtualizado: Curso)=> {
         const cursosAtualizados = cursos.map((curso)=>
             String(curso.id) === String(cursoAtualizado) ? cursoAtualizado:curso)
+    
+        setCursos(cursosAtualizados);
+        setCursoEmEdicao(null);
     }
 
     return (
